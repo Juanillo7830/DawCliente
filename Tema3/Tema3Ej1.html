@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversión de Tipos en JavaScript</title>
+</head>
+<body>
+    <h1>Conversión de Tipos en JavaScript</h1>
+    <script>
+        // Declaración de variables con distintos tipos de datos
+        let numero = 42; 
+        let cadena = "Hola, mundo"; 
+        let booleano = true; 
+        let nulo = null; 
+        let indefinido; 
+
+        // Mostrar el tipo de cada variable usando typeof
+        console.log("Tipo de numero:", typeof numero); // Esperado: "number"
+        console.log("Tipo de cadena:", typeof cadena);// Esperado: "string"
+        console.log("Tipo de booleano:", typeof booleano); // Esperado: "boolean"
+        console.log("Tipo de nulo:", typeof nulo); // Esperado: "object"
+        console.log("Tipo de indefinido:", typeof indefinido); // Esperado: "undefined"
+
+        // Conversión de tipos
+        // Número a cadena
+        let numero_a_cadena = String(123);
+        console.log("Número a cadena:", numero_a_cadena, "Tipo:", typeof numero_a_cadena); 
+        // Esperado: "123" y tipo "string"
+
+        // Cadena a número
+        let cadena_a_numero = Number("123");
+        console.log("Cadena a número:", cadena_a_numero, "Tipo:", typeof cadena_a_numero); 
+        // Esperado: 123 y tipo "number"
+
+        // Booleanos
+        let booleano_de_cero = Boolean(0);
+        console.log("Booleano de 0:", booleano_de_cero, "Tipo:", typeof booleano_de_cero); 
+        // Esperado: false y tipo "boolean"
+
+        let booleano_de_texto = Boolean("texto");
+        console.log("Booleano de 'texto':", booleano_de_texto, "Tipo:", typeof booleano_de_texto); 
+        // Esperado: true y tipo "boolean"
+    </script>
+</body>
+</html>
