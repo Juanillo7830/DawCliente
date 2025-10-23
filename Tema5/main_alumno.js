@@ -83,15 +83,22 @@ btnRemove.addEventListener('click', function () {
    });
 // TODO: 3. Crear función para aplicar eventos hover a un párrafo
 //         - Usar addEventListener para 'mouseover' y 'mouseout'
-   
+   1
    
 // TODO: 4. Aplicar hover a todos los párrafos existentes inicialmente
-   contenido.addEventListener('mouseover', function (event) {
-      contenido.style.backgroundColor = '#e7f5ff';
+function aplicarHover(elemento) {
+   elemento.addEventListener('mouseover', function () {
+      elemento.style.backgroundColor = '#e7f5ff';
    });
-   contenido.addEventListener('mouseout', function (event) {
-      contenido.style.backgroundColor = '';
+   elemento.addEventListener('mouseout', function () {
+      elemento.style.backgroundColor = '';
    });
+}
+
+const parrafosEj3 = contenido.getElementsByTagName('p');
+for (let i = 0; i < parrafosEj3.length; i++) {
+   aplicarHover(parrafosEj3[i]);
+}
 
 /* ======================================================
    TODO: Ejercicio 4 – Trabajar con inputs y formularios
