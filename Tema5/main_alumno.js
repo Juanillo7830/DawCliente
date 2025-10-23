@@ -86,6 +86,7 @@ btnRemove.addEventListener('click', function () {
    1
    
 // TODO: 4. Aplicar hover a todos los párrafos existentes inicialmente
+//funcion para aplicar hover a un elemento, que recibiremos como parametro
 function aplicarHover(elemento) {
    elemento.addEventListener('mouseover', function () {
       elemento.style.backgroundColor = '#e7f5ff';
@@ -94,7 +95,7 @@ function aplicarHover(elemento) {
       elemento.style.backgroundColor = '';
    });
 }
-
+//aplicamos hover a todos los parrafos existentes inicialmente
 const parrafosEj3 = contenido.getElementsByTagName('p');
 for (let i = 0; i < parrafosEj3.length; i++) {
    aplicarHover(parrafosEj3[i]);
