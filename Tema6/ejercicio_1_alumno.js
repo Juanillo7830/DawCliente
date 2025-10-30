@@ -609,6 +609,17 @@ function librosRecientes() {
 
     mostrarLibros(recientes);
 }
+     function eliminarLibro(titulo) {
+            // Buscar el índice del libro a eliminar
+            var indice = biblioteca.findIndex(function(libro) {
+                return libro.titulo === titulo;
+            });
+            // Si se encuentra, eliminarlo
+            if (indice !== -1) {
+                biblioteca.splice(indice, 1);
+                mostrarLibros(biblioteca); // Actualizar la visualización
+            }
+        }
 
 function mostrarLibros(arrayLibros) {
     // TODO: Mostrar libros en formato de tarjetas HTML
@@ -620,9 +631,12 @@ function mostrarLibros(arrayLibros) {
         html += "<p class='card-text'>Autor: " + libro.autor + "</p>";
         html += "<p class='card-text'>Año: " + libro.año + "</p>";
         html += "<p class='card-text'>Género: " + libro.genero + "</p>";
+        html += "<button class='btn btn-danger btn-sm' onclick='eliminarLibro(\"" + libro.titulo + "\")'>Eliminar</button>";
         html += "</div>";
         html += "</div>";
     });
+
+    html += "</div>";
 
     if (arrayLibros.length === 0) {
         html = "<div class='alert alert-warning'>No hay libros para mostrar</div>";
