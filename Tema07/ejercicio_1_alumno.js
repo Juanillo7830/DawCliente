@@ -129,24 +129,19 @@ document.getElementById('run-e8').addEventListener('click', function () {
 // Ejercicio 9 - Funciones anidadas (plantilla)
 document.getElementById('run-e9').addEventListener('click', function () {
   // Implementar closure con función externa e interna
-  function externa(prefijo) {
+  const closure = function externa(prefijo) {
     // La función interna "recuerda" el prefijo de la función externa
+      
     function interna(texto) {
       // Usar el prefijo del scope externo y convertir el texto a mayúsculas
+        
       return `${prefijo}: ${texto.toUpperCase()}`;
     }
-    return interna(); // Retornar la función interna
-  }
+    return interna; // Retornar la función interna
+  };
 
-  const texto = document.getElementById('a-e9').value || 'texto ejemplo';
-  const out = document.getElementById('out-e9');
-  
-  // Crear una función con prefijo fijo
-  const conPrefijo = externa('Mensaje');
-  // La función retornada "recuerda" el prefijo
-  const resultado = conPrefijo(texto);
-  
-  out.textContent = resultado;
+  closure('Mensaje de prueba');
+
 });
 
 // Ejercicio 10 - Métodos nativos (plantilla)
