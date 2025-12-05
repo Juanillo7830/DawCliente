@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solución práctica - Tema 9</title>
+    <link rel="stylesheet" href="css.css">
+   
+</head>
+<body>
+    <div class="container">
+        <h1>Solución práctica – Tema 9</h1>
+        <div class="subtitle">Formulario con eventos, expresiones regulares y cookies</div>
+
+        <div id="mensajeBienvenida"></div>
+
+        <form id="miFormulario">
+            <div class="form-group">
+                <label for="username">Nombre de usuario</label>
+                <input type="text" id="username" name="username">
+                <div class="help-message" id="helpUsername">Introduce solo letras y espacios.</div>
+                <div class="validation-message" id="validUsername"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="correo">Correo electrónico</label>
+                <input type="email" id="correo" name="correo">
+                <div class="help-message" id="ayudaCorreo">Debe ser un correo electrónico válido.</div>
+                <div class="validation-message" id="validoCorreo"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="contrasena">Contraseña</label>
+                <input type="password" id="contrasena" name="contrasena">
+                <div class="help-message" id="ayudaContrasena">Mín. 8 caracteres, 1 mayúscula, 1 número y 1 símbolo.</div>
+                <div class="validation-message" id="validoContrasena"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="edad">Edad</label>
+                <input type="text" id="edad" name="edad">
+                <div class="help-message" id="ayudaEdad">Introduce solo números.</div>
+                <div class="validation-message" id="validoEdad"></div>
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="recordar" name="recordar">
+                <label for="recordar">Recordarme (guardar cookie con el nombre)</label>
+            </div>
+
+            <div class="button-group">
+                <button type="submit" class="btn-primary">Enviar</button>
+                <button type="button" id="btnEliminarCookie" class="btn-danger">Eliminar cookie</button>
+            </div>
+        </form>
+
+        <div id="mensajeInfo"></div>
+    </div>
+    <script defer src="script.js"></script>
+</body>
+</html>
