@@ -24,6 +24,7 @@ class AlumnoApp implements Alumno {
         if (this.notas.length === 0) {
             return 0;
         }
+        // Suma todas las notas y divide entre el número de notas
         const suma = this.notas.reduce((total, nota) => total + nota, 0);
         return suma / this.notas.length;
     }
@@ -38,28 +39,28 @@ class AlumnoApp implements Alumno {
 // Función que ejecuta el ejercicio
 function ejecutarEjercicio10(): void {
     console.log("=== EJERCICIO 10: MINI PROYECTO - GESTIÓN DE ALUMNOS ===");
-    
+
     // Crear array de alumnos
     const alumnos: AlumnoApp[] = [
         new AlumnoApp(1, "Miguel Sánchez", [7.5, 8.5, 8.0, 7.8]),
         new AlumnoApp(2, "Isa González", [8.0, 8.5, 9.0, 8.5]),
         new AlumnoApp(3, "Alejandro Vázquez", [6.5, 7.0, 7.5, 6.8])
     ];
-    
+
     // Mostrar resumen de cada alumno
     console.log("\nResumen de alumnos:");
     console.log("-------------------");
     alumnos.forEach((alumno) => {
         console.log(alumno.obtenerResumen());
     });
-    
+
     // Calcular media global
     let sumaMedias: number = 0;
     alumnos.forEach((alumno) => {
         sumaMedias += alumno.calcularNotaMedia();
     });
     const mediaGlobal = sumaMedias / alumnos.length;
-    
+
     console.log("\n-------------------");
     console.log(`Media global de todos los alumnos: ${mediaGlobal.toFixed(2)}`);
     console.log("========================================================\n");
