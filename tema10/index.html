@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Login - Promesas y Bootstrap 5</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background:  url('https://images.pexels.com/photos/1545743/pexels-photo-1545743.jpeg') no-repeat center center fixed;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .login-container {
+            background: rgba(255, 255, 255, 0.774);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+        }
+        .login-title {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+            font-weight: bold;
+        }
+        .spinner-container {
+            text-align: center;
+            margin: 20px 0;
+            display: none;
+        }
+        .alert-container {
+            margin-top: 20px;
+            display: none;
+        }
+        .form-control:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+        }
+        .btn-login {
+            width: 100%;
+            font-weight: bold;
+            background-color: #667eea;
+            border: none;
+            padding: 10px 0;
+            transition: background-color 0.3s;
+        }
+        .btn-login:hover {
+            background-color: #764ba2;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1 class="login-title">Iniciar Sesión</h1>
+        
+        <!-- Formulario de Login -->
+        <form id="loginForm" novalidate>
+            <!-- Campo Email -->
+            <div class="mb-3">
+                <label for="email" class="form-label">Correo Electrónico</label>
+                <input 
+                    type="email" 
+                    class="form-control" 
+                    id="email" 
+                    placeholder="test@medac.es"
+                    required
+                >
+                <small class="text-muted">Usar: test@medac.es</small>
+            </div>
+
+            <!-- Campo Contraseña -->
+            <div class="mb-3">
+                <label for="password" class="form-label">Contraseña</label>
+                <input 
+                    type="password" 
+                    class="form-control" 
+                    id="password" 
+                    placeholder="••••••"
+                    required
+                >
+                <small class="text-muted">Usar: 1234</small>
+            </div>
+
+            <!-- Botón de Envío -->
+            <button type="submit" class="btn btn-primary btn-login">
+                Iniciar Sesión
+            </button>
+        </form>
+
+        <!-- Spinner de Carga -->
+        <div class="spinner-container" id="spinnerContainer">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Cargando...</span>
+            </div>
+            <p class="text-muted mt-2">Conectando al servidor...</p>
+        </div>
+
+        <!-- Contenedor de Alertas -->
+        <div class="alert-container" id="alertContainer"></div>
+    </div>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Script de Login -->
+    <script src="script.js"></script>
+</body>
+</html>
