@@ -24,7 +24,7 @@ class AlumnoApp implements Alumno {
         if (this.notas.length === 0) {
             return 0;
         }
-        const suma = this.notas.reduce((acc, nota) => acc + nota, 0);
+        const suma = this.notas.reduce((total, nota) => total + nota, 0);
         return suma / this.notas.length;
     }
 
