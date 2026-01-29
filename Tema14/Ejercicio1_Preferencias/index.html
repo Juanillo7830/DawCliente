@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 - Preferencias de Usuario</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Preferencias de Usuario</h1>
+
+        <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" placeholder="Introduce tu nombre">
+        </div>
+
+        <div class="form-group">
+            <label for="color">Color de fondo:</label>
+            <select id="color">
+                <option value="white">Blanco</option>
+                <option value="#FFE5E5">Rojo claro</option>
+                <option value="#E5F5FF">Azul claro</option>
+                <option value="#E5FFE5">Verde claro</option>
+                <option value="#FFFFE5">Amarillo claro</option>
+                <option value="#F5E5FF">Púrpura claro</option>
+                <option value="#FFE5F5">Rosa claro</option>
+            </select>
+        </div>
+
+        <div class="button-group">
+            <button id="guardar">Guardar Preferencias</button>
+            <button id="restablecer">Restablecer Preferencias</button>
+        </div>
+
+        <div class="info">
+            <p>Los datos se guardarán automáticamente en localStorage. Intenta recargar la página para verificar que se mantienen.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

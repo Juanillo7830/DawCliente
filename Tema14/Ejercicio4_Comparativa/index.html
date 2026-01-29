@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4 - Comparativa localStorage vs sessionStorage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Comparativa: localStorage vs sessionStorage</h1>
+
+        <div class="input-section">
+            <div class="form-group">
+                <label for="texto">Introduce un texto:</label>
+                <input type="text" id="texto" placeholder="Escribe algo aquí">
+            </div>
+
+            <div class="button-group">
+                <button id="guardarLocal">Guardar en localStorage</button>
+                <button id="guardarSession">Guardar en sessionStorage</button>
+            </div>
+        </div>
+
+        <div class="comparativa">
+            <div class="almacenamiento">
+                <h2>localStorage</h2>
+                <div class="contenido">
+                    <p><strong>Valor:</strong></p>
+                    <div id="valorLocal" class="valor">Sin datos</div>
+                </div>
+                <button id="limpiarLocal" class="btn-limpiar">Limpiar</button>
+            </div>
+
+            <div class="almacenamiento">
+                <h2>sessionStorage</h2>
+                <div class="contenido">
+                    <p><strong>Valor:</strong></p>
+                    <div id="valorSession" class="valor">Sin datos</div>
+                </div>
+                <button id="limpiarSession" class="btn-limpiar">Limpiar</button>
+            </div>
+        </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

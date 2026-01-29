@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3 - sessionStorage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Formulario con sessionStorage</h1>
+
+        <form id="formulario">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" placeholder="Introduce tu nombre">
+            </div>
+
+            <div class="form-group">
+                <label for="curso">Curso:</label>
+                <input type="text" id="curso" placeholder="Ej: 1º DAW, 2º DAM">
+            </div>
+
+            <button type="submit">Guardar en sessionStorage</button>
+            <button type="button" id="limpiar">Limpiar Formulario</button>
+        </form>
+
+        <div class="datos-guardados" id="datosGuardados" style="display: none;">
+            <h2>Datos almacenados:</h2>
+            <p><strong>Nombre:</strong> <span id="mostrarNombre"></span></p>
+            <p><strong>Curso:</strong> <span id="mostrarCurso"></span></p>
+        </div>
+    <script src="script.js"></script>
+</body>
+</html>

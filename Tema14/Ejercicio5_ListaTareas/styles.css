@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 30px auto;
+    background-color: white;
+    padding: 40px;
+}
+
+h1 {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.input-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#inputTarea {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+#btnAnadir {
+    padding: 10px 20px;
+    background-color: #16a085;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.info-sincronizacion {
+    background-color: #e3f2fd;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-left: 3px solid #2196F3;
+    font-size: 14px;
+}
+
+.filtros {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.filtro-btn {
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    background-color: white;
+    cursor: pointer;
+}
+
+.filtro-btn.activo {
+    background-color: #667eea;
+    color: white;
+}
+
+.btn-limpiar {
+    margin-left: auto;
+    padding: 8px 16px;
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.lista-tareas {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.tarea {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+    gap: 10px;
+    border-left: 3px solid #667eea;
+}
+
+.tarea.completada {
+    opacity: 0.7;
+}
+
+.tarea.completada .texto-tarea {
+    text-decoration: line-through;
+}
+
+.checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.texto-tarea {
+    flex: 1;
+}
+
+.btn-eliminar {
+    padding: 5px 10px;
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.estadisticas {
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-left: 3px solid #ff9800;
+}
+
+.estadisticas p {
+    margin-bottom: 8px;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2 - Contador de Visitas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Contador de Visitas</h1>
+
+        <div class="counter-display">
+            <p>Has visitado esta página:</p>
+            <div id="contador" class="numero">0</div>
+            <p>veces</p>
+        </div>
+
+        <div class="button-group">
+            <button id="reiniciar">Reiniciar Contador</button>
+        </div>
+
+        <div class="info">
+            <h3>¿Cómo funciona?</h3>
+            <ul>
+                <li>El contador se incrementa automáticamente cada vez que recarga la página</li>
+                <li>Los datos se guardan en localStorage</li>
+                <li>Intenta recargar la página o cerrar y abrir el navegador - el contador persistirá</li>
+                <li>Haz clic en "Reiniciar" para resetear el contador</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

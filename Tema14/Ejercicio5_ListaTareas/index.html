@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5 - Lista de Tareas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Mi Lista de Tareas</h1>
+
+        <div class="input-section">
+            <input type="text" id="inputTarea" placeholder="Escribe una nueva tarea..." />
+            <button id="btnAnadir">Agregar Tarea</button>
+        </div>
+
+        <div class="info-sincronizacion">
+            <p>Abre esta página en otra pestaña - verás que las tareas se sincronizan automáticamente</p>
+        </div>
+
+        <div class="filtros">
+            <button id="filtroTodas" class="filtro-btn activo">Todas</button>
+            <button id="filtroPendientes" class="filtro-btn">Pendientes</button>
+            <button id="filtroCompletadas" class="filtro-btn">Completadas</button>
+            <button id="btnLimpiar" class="btn-limpiar">Borrar completadas</button>
+        </div>
+
+        <ul id="listaTareas" class="lista-tareas"></ul>
+
+        <div class="estadisticas">
+            <p>Total de tareas: <span id="totalTareas">0</span></p>
+            <p>Completadas: <span id="tareasCompletadas">0</span></p>
+            <p>Pendientes: <span id="tareasPendientes">0</span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
