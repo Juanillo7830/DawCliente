@@ -4,45 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 4 - Comparativa localStorage vs sessionStorage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="py-4">
     <div class="container">
-        <h1>Comparativa: localStorage vs sessionStorage</h1>
+        <h1 class="mb-4">Comparativa: localStorage vs sessionStorage</h1>
 
-        <div class="input-section">
-            <div class="form-group">
-                <label for="texto">Introduce un texto:</label>
-                <input type="text" id="texto" placeholder="Escribe algo aquí">
-            </div>
+        <div class="input-section card mb-4">
+            <div class="card-body">
+                <div class="form-group mb-3">
+                    <label for="texto" class="form-label">Introduce un texto:</label>
+                    <input type="text" id="texto" class="form-control" placeholder="Escribe algo aquí">
+                </div>
 
-            <div class="button-group">
-                <button id="guardarLocal">Guardar en localStorage</button>
-                <button id="guardarSession">Guardar en sessionStorage</button>
+                <div class="button-group d-flex gap-2">
+                    <button id="guardarLocal" class="btn btn-primary">Guardar en localStorage</button>
+                    <button id="guardarSession" class="btn btn-info">Guardar en sessionStorage</button>
+                </div>
             </div>
         </div>
 
-        <div class="comparativa">
-            <div class="almacenamiento">
-                <h2>localStorage</h2>
-                <div class="contenido">
-                    <p><strong>Valor:</strong></p>
-                    <div id="valorLocal" class="valor">Sin datos</div>
+        <div class="comparativa row g-3">
+            <div class="almacenamiento col-md-6">
+                <div class="card h-100">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">localStorage</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="mb-2"><strong>Valor:</strong></p>
+                        <div id="valorLocal" class="valor p-3 bg-light rounded border">Sin datos</div>
+                    </div>
+                    <div class="card-footer">
+                        <button id="limpiarLocal" class="btn btn-outline-danger btn-sm btn-limpiar">Limpiar</button>
+                    </div>
                 </div>
-                <button id="limpiarLocal" class="btn-limpiar">Limpiar</button>
             </div>
 
-            <div class="almacenamiento">
-                <h2>sessionStorage</h2>
-                <div class="contenido">
-                    <p><strong>Valor:</strong></p>
-                    <div id="valorSession" class="valor">Sin datos</div>
+            <div class="almacenamiento col-md-6">
+                <div class="card h-100">
+                    <div class="card-header bg-info text-white">
+                        <h5 class="mb-0">sessionStorage</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="mb-2"><strong>Valor:</strong></p>
+                        <div id="valorSession" class="valor p-3 bg-light rounded border">Sin datos</div>
+                    </div>
+                    <div class="card-footer">
+                        <button id="limpiarSession" class="btn btn-outline-danger btn-sm btn-limpiar">Limpiar</button>
+                    </div>
                 </div>
-                <button id="limpiarSession" class="btn-limpiar">Limpiar</button>
             </div>
         </div>
 
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
